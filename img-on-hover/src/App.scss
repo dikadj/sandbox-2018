@@ -1,0 +1,30 @@
+
+// image
+.my-img-wrapper {
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  .my-img {
+    background-color: #fff;
+    background-image: radial-gradient(rgba(240,240,240,0), rgba(60,60,60,0)), url('https://source.unsplash.com/Z3tc0Bfv0c4/800x500');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s;
+    transform: scale(1);
+    .my-img-text {
+      color: rgba(240,240,240,0);
+      transition: color 0.3s;
+    }
+  }
+  &:hover .my-img,
+  &:focus .my-img {
+    background-image: radial-gradient(rgba(240,240,240,.0), rgba(60,60,60,.5)), url('https://source.unsplash.com/Z3tc0Bfv0c4/800x500');
+    transform: scale(1.1);
+    .my-img-text {
+      color: rgba(240,240,240,1);
+    }
+  }
+}

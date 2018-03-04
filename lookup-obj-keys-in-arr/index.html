@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Look Up Object Keys in an Array</title>
+	</head>
+	<body>
+		<script>
+			function keysInArr(collection, source) {
+			  var arr = [];
+
+			  var sKey = Object.keys(source);
+
+			  for (var i = 0; i < sKey.length; i++) {
+
+			    var filter = collection.filter(function(obj) {
+			      return obj.hasOwnProperty(sKey[i]);
+			    });
+
+			    arr = filter;
+
+			  }
+
+
+			  // Only change code above this line
+			  console.log(arr);
+			}
+
+			keysInArr([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 });
+		</script>
+	</body>
+</html>
