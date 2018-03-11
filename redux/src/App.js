@@ -1,7 +1,6 @@
 import React from "react"
 import { createStore, combineReducers } from "redux"
 import { Provider, connect } from "react-redux"
-import "whatwg-fetch"
 
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -230,24 +229,6 @@ const ArticleApp = () => (
 		<AddArticle />
 		<VisibleArticleList />
 		<Footer />
-		<form>
-			<textarea
-				className="test-input"
-			/>
-			<button
-				className="input-button-test"
-				onClick={(e) => {
-					e.preventDefault()
-					const q = query => document.querySelector(query)
-					$(".test-el").html(`
-						${q(".test-input").value}
-					`)
-				}}
-			>
-				button
-			</button>
-		</form>
-		<div className="test-el" />
 	</div>
 )
 
